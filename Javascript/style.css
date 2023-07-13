@@ -1,0 +1,27 @@
+:root{
+    --dark-green:#7dd56f;
+    --light-green:#28b487;
+    --white:#ffffff;
+    --black:#000000;
+}
+*:before,
+*:after,
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(var(--light-green), var(--dark-green));
+}
+h1{
+    font-family: sans-serif;
+    line-height: 1.3;
+    text-align: center;
+    font-size: 3rem;
+    color:var(--black)
+}
