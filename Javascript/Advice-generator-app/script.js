@@ -9,7 +9,7 @@ function generateAdvice() {
             
         }).then((data) => {
             const adviceMessage = data["slip"];
-            quote.innerHTML = adviceMessage["advice"]
+            advice.innerHTML = adviceMessage["advice"]
     })
 }
 
