@@ -10,6 +10,8 @@ function generateAdvice() {
         }).then((data) => {
             const adviceMessage = data["slip"];
             advice.innerHTML = adviceMessage["advice"]
+        }).catch(() => {
+        alert("Error!!!")
     })
 }
 
