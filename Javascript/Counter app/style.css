@@ -49,12 +49,7 @@ flex-direction: column;
 
 
 }
-.blue{
-    color: #1a1eed;
-}
-.red{
-    color: var(--red);
-}
+
 .btn{
     display: grid;
     gap:1rem;
