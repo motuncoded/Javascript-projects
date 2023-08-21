@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sign in modal</title>
+</head>
+<body>
+    <div class="flex">
+    <button class="sign-up">Sign up</button>
+    <button class="sign-in">Sign in</button>
+</div>
+<section class="modal hidden">
+<form>
+<div class='col'>
+					<label>First Name</label>
+					<input type='text' placeholder='First Name' />
+				</div>
+				<div class='col'>
+					<label>Last Name</label>
+					<input type='text' placeholder='First Name' />
+        </div>
+        <div class='row'>
+          <input type="checkbox" name="" id="" />
+          <p>I have accepted the terms and conditions.</p>
+        </div>
+        <button>Sign up</button>
+			</form>
+            </section>
+            <section class="modal hidden">
+<form>
+<div class='col'>
+					<label>First Name</label>
+					<input type='text' placeholder='First Name' />
+				</div>
+				<div class='col'>
+					<label>Last Name</label>
+					<input type='text' placeholder='First Name' />
+        </div>
+        <div class='row'>
+          <input type="checkbox" name="" id="" />
+          <p>I have accepted the terms and conditions.</p>
+        </div>
+        <button>Sign up</button>
+			</form>
+            </section>
+<script>
+const signIn = document.querySelector(".sign-in");
+const signUp = document.querySelector(".sign-up")
+const modal = document.querySelector(".modal")
+
+signUp.addEventListener("click", (e)=>{
+    modal.classList.remove("hidden");
+    signUp.classList.add("hidden")
+    signIn.classList.add("hidden")
+
+})
+signIn.addEventListener("click", (e)=>{
+    modal.classList.remove("hidden");
+    signIn.classList.add("hidden")
+    signUp.classList.add("hidden")
+
+})
+
+</script>
+</body>
+</html>
