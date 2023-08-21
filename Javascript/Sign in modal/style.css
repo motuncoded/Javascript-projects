@@ -1,101 +1,99 @@
 :root {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
-html{
+html {
 }
-body{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: black;
-  color: white;
-  font-size: 18px;
-  font-family: sans-serif;
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	font-size: 18px;
+	font-family: sans-serif;
 }
-.flex{
-display: flex;
+.flex {
+	display: flex;
 }
-.modal{
-    width: 100%;
-     display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.hidden{
-    display: none;
-}
-form{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.col{
-    display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: .5rem;
-}.row{
-     display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding: 1rem;
-}
-label{
-  padding: .5rem 0;
-  font-size: 1rem;
-}
-input[type="text"]{
-  background-color: white;
-  border-radius: .3rem;
-  padding: .5rem;
-  width: 300px;
-  border: none;
-  outline: none;
-}
-p{
-  font-size: 1rem;
-}
-button{
-  border-radius: .3rem;
-  padding: .5rem;
-  margin: 1rem;
-  outline: none;
-}
-.sign-up{
-    background-color: black;
-    color: white;
-    border: 2px solid white;
-  border-radius: .3rem;
-  padding: .5rem;
-  margin: 1rem;
-  outline: none;
-}
-.sign-up:hover{
-  background-color: white;
-  color: black;
-      border: 2px solid black;
+.modal {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 0.5fr 0.5fr;
 
-
-
+	padding: 1rem;
 }
-.sign-in{
-    background-color:white;
-    border: 2px solid black;
-  border-radius: .3rem;
-  padding: .5rem;
-  margin: 1rem;
-  outline: none;
-  color: black;
+h1 {
+	font-size: 4rem;
+	text-align: center;
 }
-.sign-in:hover{
-  background-color: black;
-  color: white;  
-    border: 2px solid white;
+.overlay {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	width: 450px;
+	padding: 0.5rem;
+	border-radius: 0.5rem;
+	background-color: black;
+}
+.hidden {
+	display: none;
+}
+form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem;
+}
+.col {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 0.5rem;
+}
+.row {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+label {
+	padding: 0.5rem 0;
+	font-size: 1rem;
+}
+input[type='text'] {
+	background-color: white;
+	border-radius: 0.3rem;
+	padding: 0.5rem;
+	width: 300px;
+	border: none;
+	outline: none;
+}
+p {
+	font-size: 1rem;
+}
+button {
+	border-radius: 0.3rem;
+	margin: 1rem;
+	outline: none;
+}
+.sign-up {
+	background-color: black;
+	color: white;
+	border: 2px solid white;
+	border-radius: 0.3rem;
+	padding: 0.5rem;
+	margin: 1rem;
+	outline: none;
+}
 
-
+.sign-in {
+	background-color: white;
+	border: 2px solid black;
+	border-radius: 0.3rem;
+	padding: 0.5rem;
+	margin: 1rem;
+	outline: none;
+	color: black;
 }
