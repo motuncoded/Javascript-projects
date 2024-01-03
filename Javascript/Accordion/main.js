@@ -1,7 +1,7 @@
-import './style.css'
-import { setupCounter } from './counter.js'
+import "./style.css";
+import { setupCounter } from "./counter.js";
 
-document.querySelector('#app').innerHTML = `
+document.querySelector("#app").innerHTML = `
   <div class="accordion-container">
   <h3>Accordion</h3>
   <div class="accordion">
@@ -22,6 +22,6 @@ document.querySelector('#app').innerHTML = `
 
       </div>
   </div>
-`
+`;
 
-setupCounter(document.querySelector('#counter'))
+setupCounter(document.querySelector("#counter"));

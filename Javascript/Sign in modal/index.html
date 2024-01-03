@@ -1,35 +1,35 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Sign in Modal</title>
-</head>
-<body>
-    <div class="modal-button ">
-        <button class="button">click me</button>
-         <div class="modal none">
-            <h1>Helo</h1>
-        </div>
-       
+  </head>
+  <body>
+    <div class="modal-button">
+      <button id="btn">click me</button>
     </div>
-    
-    <script type="module">
-        const button = document.querySelector("button");
-        const modal = document.getElementsByClassName("modal");
-        const modalButton = document.getElementsByClassName("modal-button");
+    <div id="modal">
+      <div>
+        <button id="span">&times;</button>
+      </div>
+      <h1>Thanks for Clicking</h1>
+    </div>
 
-        button.addEventListener("click", openModal);
+    <script>
+      const btn = document.querySelector("#btn");
+      const modal = document.querySelector("#modal");
+      const modalButton = document.getElementsByClassName("modal-button");
+      const none = document.getElementsByClassName("none");
+      const span = document.querySelector("#span");
 
-        function openModal(){
-                modal.classList.remove("none");
-    
-
-        }
-
-        </script>
-
-    
-</body>
+      btn.onclick = function () {
+        modal.style.visibility = "visible";
+      };
+      span.onclick = function () {
+        modal.style.visibility = "hidden";
+      };
+    </script>
+  </body>
 </html>

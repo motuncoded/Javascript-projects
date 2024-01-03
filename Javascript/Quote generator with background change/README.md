@@ -1,23 +1,23 @@
-Question: Random Quote Generator!! Build A Random Quote Generator, A Program That Displays A Randomly Selected Quote Each Time The User Clicks A Button. Starter Code: /*** * `Quotes` Array ***/ /*** * `GetRandomQuote` Function ***/ /*** * `PrintQuote` Function ***/ Document.GetElementById('Load-Quote').AddEventListener("Click", PrintQuote, False);
+Question: Random Quote Generator!! Build A Random Quote Generator, A Program That Displays A Randomly Selected Quote Each Time The User Clicks A Button. Starter Code: /**\* _ `Quotes` Array _**/ /**\* _ `GetRandomQuote` Function _**/ /**\* _ `PrintQuote` Function _**/ Document.GetElementById('Load-Quote').AddEventListener("Click", PrintQuote, False);
 Random Quote Generator!!
 
 Build a random quote generator, a program that displays a randomly selected quote each time the user clicks a button.
 
 Starter Code:
-/***
-* `quotes` array
-***/
+/\*\*\*
 
+- `quotes` array
+  \*\*\*/
 
-/***
-* `getRandomQuote` function
-***/
+/\*\*\*
 
+- `getRandomQuote` function
+  \*\*\*/
 
-/***
-* `printQuote` function
-***/
+/\*\*\*
 
+- `printQuote` function
+  \*\*\*/
 
 document.getElementById('load-quote').addEventListener("click", printQuote, false);
 
@@ -74,4 +74,3 @@ BONUS
 Quotes automatically refresh at regular intervals.
 
 Background color changes to a random color each time the quote refreshes.
-
