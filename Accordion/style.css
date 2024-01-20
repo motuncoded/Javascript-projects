@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.3rem;
+  font-family: system-ui;
+  color: #0a0a0a;
+}
+#app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(90deg, #eee 100%, #fff 100%);
+}
+.accordion-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.accordion-container > h3 {
+  padding: 1rem 0;
+}
+.accordion {
+  width: 600px;
+  padding: 1rem;
+  box-shadow: 0px 1px 3px rgb(0, 0, 0);
+}
+
+details {
+  padding: 1rem 1rem;
+}
+summary {
+  font-weight: 700;
+  position: relative;
+  padding: 1rem 2rem 1rem 0;
+}
+details > p {
+  margin-left: 2rem;
+  color: gray;
+}
+summary::marker {
+  content: "";
+}
+
+summary::before,
+summary::after {
+  position: absolute;
+  right: 1rem;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+details:not([open]) summary::before {
+  content: "+";
+}
+
+details[open] > summary::after {
+  content: "-";
+}
+details[open] summary {
+  transition: all 0.3s ease-in;
+}
+details[open] > p {
+  background-color: var();
+}

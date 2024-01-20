@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: grid;
+  place-items: center;
+  font-family: system-ui, sans-serif;
+}
+.container {
+  margin: 1rem;
+}
+form > input[type="text"] {
+  width: 250px;
+  padding: 0.5rem;
+  border: none;
+  border-bottom: 2px solid blue;
+  outline: none;
+}
+button {
+  padding: 0.5rem;
+  background-color: blue;
+  border: 2px solid blue;
+  color: #f3f3f3;
+  border-radius: 2vmax;
+  outline: none;
+}

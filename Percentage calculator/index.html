@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Percentage Calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Percentage Calculator</h2>
+      <form action="">
+        <input
+          type="text"
+          value=""
+          id="input_1"
+          placeholder="value 1"
+          maxlength="none"
+        />
+        <input type="number" value="" id="input_2" placeholder="value 2" />
+
+        <button type="button" onclick="addPercentage()" class="btn">
+          Submit
+        </button>
+      </form>
+      <div class="textContainer">
+        <p id="textParagraph"></p>
+      </div>
+    </div>
+    <script>
+      const input_1 = document.querySelector("#input_1");
+      const input_2 = document.querySelector("#input_2");
+
+      const btn = document.getElementsByClassName("btn");
+      const textContainer = document.querySelector("#textContainer");
+      const textParagraph = document.querySelector("#textParagraph");
+
+      function addPercentage() {
+        let textValue_1 = input_1.value;
+        let textValue_2 = input_2.value;
+
+        let percentageValue = ((textValue_1 / 100) * textValue_2).toFixed(2);
+        textParagraph.textContent = percentageValue;
+
+        console.log(percentageValue);
+      }
+    </script>
+  </body>
+</html>

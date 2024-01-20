@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Simple To do List</title>
+  </head>
+  <body>
+    <div class="todo">
+      <h2>Simple To Do List</h2>
+      <form>
+        <input type="text" name="" value="" id="input" autocomplete="off" />
+        <button type="button" id="btn" onclick="addTodoItem()">Submit</button>
+      </form>
+
+      <ul id="tasks"></ul>
+    </div>
+
+    <script>
+      const incompleteTasks = document.getElementById("tasks");
+      const input = document.getElementById("input");
+      const btn = document.getElementById("btn");
+
+      function addTodoItem() {
+        let newItem = document.createElement("li");
+        newItem.textContent = input.value;
+        incompleteTasks.appendChild(newItem);
+      }
+    </script>
+  </body>
+</html>

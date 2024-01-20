@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Simple Interest Calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Simple interest Calculator</h2>
+      <form action="">
+        <input
+          type="text"
+          inputmode="numeric"
+          value=""
+          name=""
+          id="principal"
+          placeholder="Principal"
+        />
+        <input
+          type="text"
+          inputmode="numeric"
+          value=""
+          name=""
+          id="rate"
+          placeholder="rate"
+        />
+        <input
+          type="text"
+          inputmode="numeric"
+          value=""
+          name=""
+          id="time"
+          placeholder="time"
+        />
+      </form>
+      <button type="button" onclick="calculateSi()">S.I</button>
+    </div>
+
+    <script>
+      var principal = document.querySelector("#principal");
+      var rate = document.querySelector("#rate");
+      var time = document.querySelector("#time");
+      var container = document.querySelector(".container");
+
+      function calculateSi() {
+        let principaleValue = principal.value;
+        let rateValue = rate.value;
+        let timeValue = time.value;
+
+        const simpleInterest = (principaleValue * rateValue * timeValue) / 100;
+        let textValue = document.createElement("p");
+        textValue.textContent = simpleInterest;
+        container.appendChild(textValue);
+
+        console.log(simpleInterest);
+      }
+    </script>
+  </body>
+</html>

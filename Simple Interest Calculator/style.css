@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+div > form {
+  padding: 1rem 0;
+}
+form > input {
+  padding: 0.5rem;
+}
+button {
+  padding: 0.5rem 1rem;
+  background-color: #0a0a0a;
+  color: #fafafa;
+}

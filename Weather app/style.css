@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,700;1,100;1,200;1,300;1,600;1,700&display=swap");
+
+:root {
+  --white: #edf2f4;
+  --blue-black: #2b2d42;
+}
+*:before,
+*:after,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  background: #67b26f; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #4ca2cd,
+    #67b26f
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #4ca2cd, #67b26f);
+  font-family: "Roboto Mono", monospace;
+}
+main {
+  text-align: center;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+form {
+  display: flex;
+  justify-center: space-between;
+}
+input[type="text"] {
+  width: 270px;
+  padding: 0.75rem;
+  color: var(--blue-black);
+  background-color: var(--white);
+  border: none;
+  border-bottom: 1px solid var(--white);
+  outline: none;
+  border-radius: 1.5rem;
+  margin: 1rem;
+}
+input[type="text"]:focus {
+}
+button {
+  width: 70px;
+  color: var(--white);
+  background-color: transparent;
+  border: 2px solid var(--white);
+  outline: none;
+  border-radius: 1.5rem;
+  margin: 1rem;
+}
+button:hover {
+  background-color: var(--white);
+  color: #4ca2cd;
+}

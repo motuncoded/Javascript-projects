@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Test grade calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <form action="" name="">
+        <div class="" input-container>
+          <input
+            type="text"
+            name=""
+            id="your_score"
+            inputmode="numeric"
+            placeholder="Place your score"
+          />
+          <input
+            type="text"
+            name=""
+            value=""
+            id="total_score"
+            inputmode="numeric"
+            placeholder="Total score"
+          />
+        </div>
+
+        <button type="button">Submit</button>
+      </form>
+      <p>Score: <span id="percentValue"></span></p>
+    </div>
+  </body>
+  <script>
+    const btn = document.querySelector("button");
+    const yourScore = document.querySelector("#your_score");
+    const totalScore = document.querySelector("#total_score");
+    const percentValue = document.querySelector("#percentValue");
+
+    btn.addEventListener("click", gradeCalculator);
+
+    function gradeCalculator() {
+      let your_scoreValue = yourScore.value;
+      let total_scoreValue = totalScore.value;
+      if ((your_scoreValue == "") & (total_scoreValue == "")) {
+        alert("Input the value");
+      }
+      let numberScore = your_scoreValue / total_scoreValue;
+      let totalPercentage = (numberScore * 100).toFixed(0);
+      percentValue.textContent = totalPercentage;
+      console.log(totalPercentage);
+    }
+  </script>
+</html>
