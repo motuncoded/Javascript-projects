@@ -9,8 +9,6 @@ const monsterStats = document.querySelector("#monsterStats");
 const monsterName = document.querySelector("#monsterName");
 const monsterHealthText = document.querySelector("#monsterHealth");
 
-
-
 let xp = 0;
 let health = 100;
 let gold = 50;
