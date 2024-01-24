@@ -1,33 +1,60 @@
+
+<!doctype html>
+
 no<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Armstrong number</title>
-</head>
-<body>
+  </head>
+  <body>
     <div>
-        <form action="">
-        <input type="text"  id="input" value="" placeholder="Place the number" />
-        <button type="button" >Submit</button>
-
-        </form>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-    </div>
+      <form action="">
+        <input type="text" id="input" value="" placeholder="Place the number" />
+        <button type="button" onclick="getNumber()">Submit</button>
+      </form>
+      <div class="para-container">
+        <p class="para1"></p>
+        <p class="para2"></p>
+        <p class="para3"></p>
     
+      </div>
+    </div>
 
     <script>
-        const input = document.querySelector("#input");
-const btn = document.querySelector("#btn")
+      const input = document.querySelector("#input");
+      let btn = document.querySelector("#btn");
+      const input1 = document.querySelector(".para1");
+      const input2 = document.querySelector(".para2");
+      const input3 = document.querySelector(".para3");
+      
+      function getNumber() {
+        let inputValue = input.value.toString();
+        para1.textContent = inputValue;
+        let inputLen = inputValue.length;
+        para2.textContent = inputLen;
+        let sum = 0;
+        for (let i = 0; i < inputLen; i++) {
+          let checkNumber = inputValue[i] * inputValue[i] * inputValue[i];
+          sum += checkNumber;
+        }
+
+
+        if (sum == inputValue) {
+          return (para3.textContent = "Armstrong Number");
+        } else {
+          return (para3.textContent = "Not an Armstrong Number");
+        }
+      }
+    </script>
+  </body>
 
         let inputValue = input.value;
         let inputLen = input.length;
         console.log("inputValue")
     </script>
 </body>
+
 </html>
