@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Body Mass Index Calculator</title>
+  </head>
+  <body>
+    <form action="">
+      <input type="text" value="" name="" id="input_1" placeholder="Weight" inputmode="numeric"/>
+      <input type="text" value="" name="" id="input_2" placeholder="Height" inputmode="numeric"/>
+      <button class="btn" type="button" onclick="getBmi()">Submit</button>
+    </form>
+    <div id="textContainer">
+      <p id="textValue"></p>
+
+      <p id="textParagraph"></p>
+    </div>
+    <script>
+      let input_1 = document.querySelector("#input_1");
+      let input_2 = document.querySelector("#input_2");
+      const btn = document.getElementsByClassName("btn");
+      const textContainer = document.querySelector("#textContainer");
+      const textParagraph = document.querySelector("#textParagraph");
+      const textValue = document.querySelector("#textValue");
+
+      function getBmi() {
+        let weight = input_1.value;
+        let height = input_2.value;
+
+        var bmi = (weight / (height * height)).toFixed(0);
+        textValue.textContent = bmi;
+        if (bmi <= 18.5) {
+          textParagraph.textContent = "Underweight";
+        } else if (bmi >= 18.5 && bmi <= 25.0) {
+          textParagraph.textContent = "Normal";
+        } else if (bmi >= 25 && bmi <= 30.0) {
+          textParagraph.textContent = "Overweight";
+        } else if (bmi > 30) {
+          textParagraph.textContent = "Obese";
+        }
+      }
+    </script>
+  </body>
+</html>
