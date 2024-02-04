@@ -3,8 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Number guess</title>
+    <title>Number guess game</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <h1>Number guess game</h1>
+      <form action="">
+        <input type="text" value="" placeholder="Guess the number" id="input" />
+        <button type="button" onclick="guessNumber()" id="btn">Submit</button>
+      </form>
+      <p id="textNumber"></p>
+      <p id="text"></p>
+    </div>
+
+    <script>
+      let input = document.getElementById("input");
+      let textNumber = document.getElementById("textNumber");
+      let text = document.getElementById("text");
+
+      function guessNumber() {
+        const inputValue = input.value;
+        let random = Math.floor(Math.random() * 10);
+        if (inputValue == random) {
+          let para = "You have guessed right";
+          text.innerHTML = para;
+          textNumber.innerText = random;
+        } else {
+          textNumber.innerText = random;
+
+          let para_1 = "Wrong guess. Try again!";
+          text.textContent = para_1;
+        }
+      }
+    </script>
+  </body>
 </html>
