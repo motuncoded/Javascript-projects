@@ -1,4 +1,8 @@
-
+:root {
+  --dark-blue: #2b2d42;
+  --white: #edf2f4;
+  --red: #ef233c;
+}
 *:before,
 *:after,
 * {

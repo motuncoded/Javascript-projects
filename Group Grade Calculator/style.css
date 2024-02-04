@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: system-ui;
+}
+h1 {
+  margin: 1rem 0;
+  text-align: center;
+  font-weight: 400;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+input[type="text"] {
+  padding: 0.5rem;
+  margin: 1rem;
+}
+
+#btn {
+  background-color: #0a0a0a;
+  padding: 0.5rem;
+  color: #fafafa;
+  width: calc(100px - 0.5rem);
+  display: flex;
+  justify-content: center;
+}
+#text {
+  margin: 1rem 0;
+}

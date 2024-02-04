@@ -8,8 +8,22 @@
   </head>
   <body>
     <form action="">
-      <input type="text" value="" name="" id="input_1" placeholder="Weight" inputmode="numeric"/>
-      <input type="text" value="" name="" id="input_2" placeholder="Height" inputmode="numeric"/>
+      <input
+        type="text"
+        value=""
+        name=""
+        id="input_1"
+        placeholder="Weight"
+        inputmode="numeric"
+      />
+      <input
+        type="text"
+        value=""
+        name=""
+        id="input_2"
+        placeholder="Height"
+        inputmode="numeric"
+      />
       <button class="btn" type="button" onclick="getBmi()">Submit</button>
     </form>
     <div id="textContainer">
@@ -37,7 +51,7 @@
           textParagraph.textContent = "Normal";
         } else if (bmi >= 25 && bmi <= 30.0) {
           textParagraph.textContent = "Overweight";
-        } else{
+        } else {
           textParagraph.textContent = "Obese";
         }
       }
