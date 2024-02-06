@@ -1,6 +1,9 @@
 function add(a, b){
     return a + b;
 }
+function mulitply(a, b){
+    return a * b;
+}
 
 var val = add(5, 7)
 var vall = add(10,8)
