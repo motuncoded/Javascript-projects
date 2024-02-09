@@ -12,7 +12,7 @@ console.log(product)
 var quotient = 66 / 3;
 console.log(quotient)
 //to increment numbers
-var myVar = 87;
+var myVar = 88;
 myVar = myVar + 1 // or myVar++
 console.log(myVar)
 //to decrement number
