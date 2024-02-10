@@ -83,20 +83,128 @@ ourFunctionWithArg(10, 5)
 //global scope 
 var myGlobal = 10; 
 function fun1() {
-        console.log(mylocal)// referenceerror, it is not defined.
+        //console.log(mylocal)// referenceerror, it is not defined.
 
     console.log(myGlobal);
 }
 fun1();
 function fun2() {
-    var mylocal = 50;
-        console.log(myGlobal);
+      var mylocal = 50;
 
-    console.log(mylocal)
 }
+console.log(fun2)
 fun2();
-var outerWear = "t-shirt";
+
+var outerWear = "t-shirt";//globl var
 function myOutfit() {
+    var outerWear = "sweater"
     return outerWear;
 }
-console.log(myOutfit())
+console.log(myOutfit())// sweater
+console.log(outerWear) //t-shirt
+
+//local scope inside the function
+function myLocalScope(){
+    var myVarr = 5;
+    console.log(myVarr)
+
+}
+myLocalScope();
+//using a return value
+
+function minusSeven(num) {
+    return num - 7;
+}
+console.log(minusSeven(10))// 3
+function timesFive(num) {
+     return num *5
+ }
+console.log(timesFive(4)) //20
+ //without return value
+var sum = 0
+function addThree(){
+    sum = sum + 3
+}
+console.log(addThree())// undefined
+//retrun value
+var changed = 0;
+function change(num){
+    return (num + 5) / 3
+}
+console.log(change(10)) //5
+
+var processed = 0;
+function processArg(num) {
+    return (num + 3) /5
+}
+console.log(processArg(6)) // 1.8
+//stand in line
+function nextInLine(arr, item) {
+
+    arr.push(item)
+    return arr.shift();
+
+}
+var testArr = [1, 2, 3, 4, 5]
+console.log("Before:" + JSON.stringify(testArr))
+console.log(nextInLine(testArr, 6));
+console.log("After:" + JSON.stringify(testArr))
+//boolean value 
+function welcomeToBooleans() {
+    return false;
+}
+//if statement
+function outTrueOrFalse(isItTrue) {
+    if (isItTrue) {
+        return 'Yes it is true'
+    }
+    return "No, it's false";
+
+}
+function trueOrFalse(wasThatTrue) {
+    if(wasThatTrue){
+        return "Yes, that was true"
+    }
+    return "No, that was false"
+}
+console.log(trueOrFalse(true)) //Yes, that was true
+function testEqual(val) {
+    if(val == 12){
+        return "Equal";
+    }
+    return "Not Equal";
+}
+    console.log(testEqual(10)) //Not Equal
+function testStrict(val) {
+    if(val === 7){
+        return "Equal";
+    }
+    return "Not Equal";
+}
+    console.log(testStrict(10)) //Not Equal
+console.log(testStrict(7))  // Equal
+
+console.log(testStrict("7")) //Not Equal
+function compareEquality(a, b) {
+    if(a === b){
+        return "equal"
+    }
+    return "not equal"
+}
+console.log(compareEquality(10, "10"))// not equal
+function testNotEqual(val) {
+    if (val != 99) {
+  return "equal"
+    }
+    return "not equal"
+}
+console.log(testNotEqual(22))//equal
+
+function testStrictNotEqual(val) {
+    if (val !== 17) {
+  return "not equal"
+    }
+    return " equal"
+}
+console.log(testStrictNotEqual(22))//equal
+
