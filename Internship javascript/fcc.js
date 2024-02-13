@@ -110,7 +110,7 @@ function myLocalScope(){
 
 }
 myLocalScope();
-//using a return value
+//using a return value+
 
 function minusSeven(num) {
     return num - 7;
@@ -207,4 +207,164 @@ function testStrictNotEqual(val) {
     return " equal"
 }
 console.log(testStrictNotEqual(22))//equal
+
+function testGreaterThan(val){
+    if (val > 100) {
+     return "greater than 100"
+    }
+    if (val > 10) {
+        return "Over 10";
+   }
+   return "10 or Under"
+}
+console.log(testGreaterThan(10))//"10 or Under"
+function testGreaterThanOrEqualTo(val){
+    if (val >= 100) {
+     return "greater than 100"
+    }
+    if (val >= 10) {
+        return "Over 10";
+   }
+   return "10 or Under"
+}
+console.log(testGreaterThanOrEqualTo(10))//"Over 10"
+function testLessThan(val) {
+    if (val < 25) {
+        return "Under 25"; 
+    }
+    if(val < 55){
+        return "Under 55"
+    }
+    return "55 or over";
+}
+ console.log(testLessThan(10))//Under 25
+function testLessThanEqualTo(val) {
+    if(val <= 12){
+        return "Smaller than or Equal to 12"
+    }
+       if(val <= 24){
+        return "Smaller than or Equal to 24"
+    }
+return "More than 24"
+}
+console.log(testLessThanEqualTo(10))//Smaller than or Equal to 12
+//and operator
+function testLogicalAnd(val){
+    if(val <= 50 && val >= 25){
+        return "Yes";
+    }
+    return "No"
+}
+console.log(testLogicalAnd(10))// No
+// or operator
+function testLogicalOr(val) {
+    if (val < 10 || val > 20 ) {
+        return "Outside"
+    }
+    return "Inside"
+}
+console.log(testLogicalOr(10))//Inside
+//else statement
+function testElse(val) {
+    var result = "";
+    if(val > 5){
+        result = "Bigger than 5"
+    }else {
+        result = "5 or smaller";
+    }
+    return result;
+}
+console.log(testElse)
+function testElseIf(val) {
+    if(val > 5){
+        return "Greater than 10";
+    }
+    else if(val < 10){
+        return "Smaller than 5"
+    }else{
+return "Between 5 and 10"
+    }
+
+}
+console.log(testElseIf(3))
+function orderMyLogic(val) {
+    if (val < 10) {
+        return "Less than 10";
+    }else if (val < 5){
+        return "Less than 5";
+    } else {
+        return "Greater than or equal  to 10";
+    }
+}
+console.log(orderMyLogic(7));
+function testSize(num) {
+    if (num < 5){
+        return "Tiny";
+    }else if(num < 10){
+        return "Small";
+    } else if (num < 15) {
+        return "Medium";
+    } else if (num < 20) {
+        return "Large";
+    }else{
+        return "Huge"
+    }
+}
+console.log(testSize(7));
+var names = ["Hole-in-one!", "Eagle", "Birdie", "Par","Bogey", "Double Bogey","Go Home"]
+function golfScore(par, strokes) {
+    if (strokes == 1) {
+        return names[0];
+    } else if (strokes <= par - 2) {
+        return names[1];
+    }else if (strokes == par - 1) {
+        return names[2];
+    }else if (strokes == par) {
+        return names[3];
+    }else if (strokes == par + 1) {
+        return names[4];
+    }else if (strokes == par + 2) {
+        return names[5];
+    }else if (strokes >= par + 3) {
+        return names[6];
+    }
+}
+console.log(golfScore(5, 4))
+console.log(golfScore(5,2))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
