@@ -332,6 +332,80 @@ function golfScore(par, strokes) {
 console.log(golfScore(5, 4))
 console.log(golfScore(5,2))
 
+//Switch statement
+function switchStatement(val) {
+    var answer = "";
+    switch (val) {
+        case 1:
+            answer = "alpha";
+            break;
+        case 2:
+            answer ="beta";
+            break
+        case 3:
+            answer ="gamma";
+            break
+        case 4:
+            answer ="delta";
+            break
+      
+    }
+
+    return answer;   
+}
+console.log(switchStatement(1))
+console.log(switchStatement(3))
+function days(val) {
+    var day = "";
+    switch(val){
+        case 1:
+            day = "Monday";
+            break;
+        case 2:
+            day = " Tuesday";
+            break;
+        case 3:
+            day = "Wednesday";
+            break;
+        case 4:
+            day = "Thursday";
+            break;
+        case 5:
+            day = "Friday";
+            break;
+        case 6:
+            day = "Satursday";
+            break;
+        case 7:
+            day = "Sunday";
+            break;
+        default:
+            day = "There is no such day";
+    }
+    return day;
+}
+console.log(days(0))
+function switchOfStuff(val) {
+    var stuff = "";
+    switch (val) {
+        case 1:
+            stuff = "Rice";
+            break;
+        case 2:
+            stuff = "Indomie";
+            break;
+        case 3:
+            stuff = "Plantain";
+            break
+        default:
+            stuff = "No stuff";
+    }
+    return stuff;
+}
+console.log(switchOfStuff(9))
+
+
+
 
 
 
