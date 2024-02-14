@@ -27,6 +27,7 @@ function sum(a, b) {
 
 }
 sum(2, 3)
+
 function mult(a, b) {
     let val = a * b;
     return val;
@@ -46,3 +47,5 @@ return 2 * (c + d);
 
 }
 cccalc(7);
+
+

@@ -331,6 +331,7 @@ function golfScore(par, strokes) {
 }
 console.log(golfScore(5, 4))
 console.log(golfScore(5,2))
+
 //Switch statement
 function switchStatement(val) {
     var answer = "";
@@ -402,6 +403,9 @@ function switchOfStuff(val) {
     return stuff;
 }
 console.log(switchOfStuff(9))
+
+
+
 
 
 
