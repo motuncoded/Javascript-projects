@@ -27,3 +27,22 @@ function sum(a, b) {
 
 }
 sum(2, 3)
+function mult(a, b) {
+    let val = a * b;
+    return val;
+}
+console.log(mult(3, 8))
+function calc(a, b) {
+    return (2 * (a + b));
+}
+calc(4, 5)// 24
+function ccalc(a,b) {
+return (2 * (a + b));
+
+}
+ccalc(9, 8);//NaN because a and b is not defined;
+function cccalc(c, d=2) {
+return 2 * (c + d);
+
+}
+cccalc(7);
