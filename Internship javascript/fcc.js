@@ -332,6 +332,9 @@ function golfScore(par, strokes) {
 console.log(golfScore(5, 4))
 console.log(golfScore(5,2))
 
+
+
+
 //Switch statement
 function switchStatement(val) {
     var answer = "";
@@ -413,6 +416,100 @@ console.log(switchOfStuff(9))
 
 
 
+
+
+
+function sequentialSizes(val) {
+    var answer = "";
+    switch (val) {
+        case 1:
+        case 2:
+        case 3:
+            answer = "Low";
+            break;
+        case 4:
+        case 5:
+        case 6:
+            answer = "Median";
+            break;
+        case 7:
+        case 8:
+        case 9:
+            answer = "High";
+            break;
+        default:
+            answer = "No grade";
+    }
+    return answer;
+    
+}
+console.log(sequentialSizes(5))
+function chainToSwitch(val) {
+    var answer = "";
+    switch (val) {
+        case "bob":
+            answer = " Marley";
+            break;
+        case 42:
+            answer = "The Answer";
+        case 1:
+            answer = "There is no #1";
+            break;
+        case 99:
+            answer = "Missed me by this much!";
+            break;
+        case 7:
+            answer = "Ate Nine";
+            break;
+        default:
+            answer = "Nothing"
+
+
+    }
+}
+console.log(chainToSwitch(5))
+function isLess(a, b) {
+    return (a < b) 
+       
+    
+}
+console.log(isLess(10, 15));
+console.log(isLess(20, 23))
+function abTest(a, b) {
+    if (a < 0 || b < 0) {
+        return undefined
+    } else {
+        return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2))
+    }
+}
+console.log(abTest(2, 2));
+console.log(abTest(-2, 2));
+var count = 0;
+function cc(card) {
+    switch (card) {
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+        case 6:
+            count++;
+            break;
+        case 10:
+        case "j":
+        case "Q":
+        case "K":
+        case "A":
+            count--;
+            break;
+            
+    }
+    var holdBet = "Hold";
+    if (count > 0) {
+        holdBet = "Bet";
+    }
+    return count + " "+ holdBet;
+}
+cc("K")
 
 
 

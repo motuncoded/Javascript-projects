@@ -28,6 +28,9 @@ function sum(a, b) {
 }
 sum(2, 3)
 
+
+
+
 function mult(a, b) {
     let val = a * b;
     return val;
@@ -48,4 +51,21 @@ return 2 * (c + d);
 }
 cccalc(7);
 
+
+
+//rest parameter
+function collect(x, ...y) {
+    console.log(x);
+    console.log(...y)
+}
+collect(1,2,3,4,5,6,7,8)
+// arrow function
+const addNum = (x, y) => {
+    return x + y;
+}
+addNum(2, 3);
+//Nested functions
+function outer() {
+    console.log("outer")
+}
 
