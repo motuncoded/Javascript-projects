@@ -27,6 +27,10 @@ function sum(a, b) {
 
 }
 sum(2, 3)
+
+
+
+
 function mult(a, b) {
     let val = a * b;
     return val;
@@ -46,6 +50,9 @@ return 2 * (c + d);
 
 }
 cccalc(7);
+
+
+
 //rest parameter
 function collect(x, ...y) {
     console.log(x);
@@ -61,3 +68,4 @@ addNum(2, 3);
 function outer() {
     console.log("outer")
 }
+
