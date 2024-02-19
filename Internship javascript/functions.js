@@ -59,5 +59,30 @@ const addNum = (x, y) => {
 addNum(2, 3);
 //Nested functions
 function outer() {
-    console.log("outer")
+    console.log("outer");
+    function inner() {
+            console.log("inner");
+
+    }
+    inner()
+
 }
+
+outer()
+//function scope
+function doSomething() {
+    let x = 10;
+    const y = 20;
+    var z = 30;
+    console.log(x, y, z)
+}
+doSomething()
+//console.log(z)
+function outer(x){
+    function inner(y) {
+        return x + y;
+    }
+    return inner;
+}
+const outerReturn = outer(10);
+outerReturn(2);

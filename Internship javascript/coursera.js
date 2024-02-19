@@ -472,7 +472,20 @@ leo.makeSound(false); // meow
 leo.makeSound(true); // purr, meow
 var cuddles = new Tiger();
 cuddles.makeSound(false); // Roar!
-cuddels.makeSound(true); // purr, Roar!
+cuddles.makeSound(true); // purr, Roar!
+const car2 = {
+   speed: 200,
+color: "red"
+}
+console.log(Object.keys(car2))
 
-
-
+const car3 = {
+    speed: 300,
+    color: "yellow"
+}
+console.log(Object.values(car3)); // [300, 'yellow']
+const car4 = {
+    speed: 400,
+    color: 'magenta'
+}
+console.log(Object.entries(car4));
