@@ -93,6 +93,7 @@ function outer(x){
 }
 const outerReturn = outer(10);
 outerReturn(2);
+outerReturn(2);
     console.log("outer")
 }
 
