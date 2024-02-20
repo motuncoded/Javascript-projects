@@ -449,15 +449,11 @@ class Parrot extends Bird {
     }
 }var polly = new Parrot(true); // we're passing `true` to the constructor so that polly can talk
 var fiji = new Parrot(false); // we're passing `false` to the constructor so that fiji can't talk
-
 polly.makeSound(); // 'chirp', 'I'm a talking parrot!'
 fiji.makeSound(); // 'chirp'
-
 polly.color; // yellow
 polly.energy; // 100
-
 polly.isActive(); // Energy is decreasing, currently at: 80
-
 var penguin = new Bird("shriek", false, "black and white", 200); // setting all the custom properties
 penguin; // Bird {color: 'black and white', energy: 200, sound: 'shriek', canFly: false }
 
@@ -466,10 +462,10 @@ penguin.canFly; // false
 penguin.color; // 'black and white'
 penguin.energy; // 200
 // leo, no purring please:
-leo.makeSound(false); // meow
+//leo.makeSound(false); // meow
 
 // leo, both purr and meow now:
-leo.makeSound(true); // purr, meow
+//leo.makeSound(true); // purr, meow
 var cuddles = new Tiger();
 cuddles.makeSound(false); // Roar!
 cuddles.makeSound(true); // purr, Roar!
@@ -489,3 +485,105 @@ const car4 = {
     color: 'magenta'
 }
 console.log(Object.entries(car4));
+
+var car5 = {
+    engine: true,
+    steering: true,
+    speed: "slow"
+}
+var sportCar = Object.create(car5)
+sportCar.speed = "fast";
+console.log(sportCar)
+for (prop in sportCar) {// not reliable
+    console.log(prop)
+}
+for(prop of Object.keys(sportCar)){ //relaible
+    console.log(prop ,sportCar[prop]) //fast
+
+}
+let name = "Zion";
+console.log(`${name}`);
+console.log(`${1 + 1 + 1 + 1 + 1} stars!`) 
+let singleLine = `let me sing`;
+let multiLine = `let me sing
+let me sing
+let me sing
+let me sing
+let me sing`;
+console.log(singleLine)
+console.log(multiLine)
+console.log(`${multiLine}`)
+let quotes = `let me sing for my mother's sister`;
+console.log(`${quotes}`)
+console.log(`${quotes} and my father's brother ${quotes}`)//let me sing for my mother's sister and my father's brother let me sing for my mother's sister
+const fruits = ['kiwi','mango','apple','pear'];
+function appendIndex(fruit, index) {
+    console.log(`${index}. ${fruit}`)
+}
+fruits.forEach(appendIndex);
+const clothes = ["shirt", "skirt","trouser","jacket"]
+function wearClothes (clothes, index){
+    console.log(`${index}: ${clothes}`)
+}
+clothes.forEach(wearClothes);
+const veggies = ['onion', 'garlic', 'potato'];
+veggies.forEach( function(veggie, index) {
+    console.log(`${index}. ${veggie}`);
+});
+const nums = [0,10,20,30,40,50];
+nums.filter( function(num) {
+    return num > 20;
+})
+console.log(nums)
+nums.map( function(num) {
+    return num / 10
+})
+const result = [];
+const drone = {
+    speed: 100,
+    color: 'yellow'
+}
+const droneKeys = Object.keys(drone);
+droneKeys.forEach( function(key) {
+    result.push(key, drone[key])
+})
+console.log(result);
+let bestBoxers = new Map();
+bestBoxers.set(1, "The Champion");
+bestBoxers.set(2, "The Runner-up");
+bestBoxers.set(3, "The third place");
+
+console.log(bestBoxers);
+//to check specific values
+bestBoxers.get(1); // 'The Champion'
+const repetitiveFruits = ['apple','pear','apple','pear','plum', 'apple'];
+const uniqueFruits = new Set(repetitiveFruits);
+console.log(uniqueFruits);// { 'apple', 'pear', 'plum' }
+//catenation of 
+const ffruits = ['apple', 'pear', 'plum']
+const berries = ['blueberry', 'strawberry']
+const fruitsAndBerries = [...ffruits, ...berries] // concatenate
+console.log(fruitsAndBerries);
+const flying = { wings: 2 }
+const car = { wheels: 4 }
+const flyingCar = {...flying, ...car}
+console.log(flyingCar) // {wings: 2, wheels: 4}
+//Add new members to arrays without using the push() method
+var veggie = ['onion', 'parsley', 'spinach', 'okra'];
+let vegetable = [...veggie, 'carrot', 'beetroot'];
+console.log(vegetable);
+//Convert a string to an array using the spread operator
+const greeting = "Hello";
+const arrayOfChars = [...greeting];
+console.log(arrayOfChars); //  ['H', 'e', 'l', 'l', 'o']
+const car6 = {
+    speed: 200,
+    color: 'yellow'
+}
+const car7 = {...car6}
+car1.speed = 201
+console.log(car6.speed, car7.speed)
+const fruits1 = ['apples', 'pears']
+const fruits2 = [...fruits1]
+fruits1.pop()
+console.log(fruits1, "not", fruits2)

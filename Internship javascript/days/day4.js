@@ -1,1 +1,0 @@
-//Task: Define a constructor function for an object type and create instances with different properties.

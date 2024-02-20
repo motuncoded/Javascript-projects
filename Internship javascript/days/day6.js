@@ -1,1 +1,0 @@
-//Task:Rewrite one of your previous functions using arrow functions and demonstrate the use of the spread/rest operator.
