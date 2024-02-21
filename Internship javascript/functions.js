@@ -86,3 +86,85 @@ function outer(x){
 }
 const outerReturn = outer(10);
 outerReturn(2);
+//callback function
+function foo(bar) {
+    bar()
+}
+foo(function () {
+    console.log("bar")
+})
+function named() {
+    console.log("bar")
+}
+foo(named);
+function fooo(bar) {
+    if (itsNight) {
+        bar();
+    }
+    if (isDrinksOverCheckOnLine) {
+        bar();
+    }
+}
+//High Order Function
+//it takes one or more functions as argument
+//it may return a function
+function getCapture(camera) {
+    camera()
+}
+getCapture(function () {
+    console.log("Canon")
+})
+function returnFn() {
+    return function () {
+        console.log("returning")
+    }
+}
+//const fn = returnFn();
+//fn();
+//example7
+ [1, 2, 3].filter(function (elem) {
+    elem > 2;
+    
+})
+//Pure
+function sayGreeting(name) {
+    return `Hello ${name}`;
+
+}
+console.log(sayGreeting("Tapas"));
+let greeting = "Hello";
+function sayGreeting1(name) {
+    return `${greeting} ${name}`;
+}
+console.log(sayGreeting1("Tapas"));
+greeting = "helo"
+console.log(sayGreeting1("Tapas"));
+//immediate invoke function expression
+function y(val) {
+    console.log(val)
+}
+function xy() {
+    y();
+}
+function xz() {
+    xy();
+}
+//recursion
+/*function foo() {
+    console.log("foo");
+        foo();
+
+}
+foo();*/
+//const fooo = function buz() {
+    //foo()
+//}
+function recurse(count) {
+    if (count === 0) {
+        console.log("No more water")
+        return;
+    }
+    console.log("Fetching water")
+    recurse(count -1)
+}
+fetchWater(5);

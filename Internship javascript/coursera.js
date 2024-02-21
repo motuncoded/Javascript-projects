@@ -562,7 +562,7 @@ console.log(uniqueFruits);// { 'apple', 'pear', 'plum' }
 //catenation of 
 const ffruits = ['apple', 'pear', 'plum']
 const berries = ['blueberry', 'strawberry']
-const fruitsAndBerries = [...ffruits, ...berries] // concatenate
+const fruitsAndBerries = [...ffruits, ...berries] // concatenation
 console.log(fruitsAndBerries);
 const flying = { wings: 2 }
 const car = { wheels: 4 }
