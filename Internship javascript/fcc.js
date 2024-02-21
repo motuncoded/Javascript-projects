@@ -331,6 +331,10 @@ function golfScore(par, strokes) {
 }
 console.log(golfScore(5, 4))
 console.log(golfScore(5,2))
+
+
+
+
 //Switch statement
 function switchStatement(val) {
     var answer = "";
@@ -402,6 +406,19 @@ function switchOfStuff(val) {
     return stuff;
 }
 console.log(switchOfStuff(9))
+
+
+
+
+
+
+
+
+
+
+
+
+
 function sequentialSizes(val) {
     var answer = "";
     switch (val) {
@@ -515,6 +532,7 @@ var hatValue = testObj.hat;
 console.log(hatValue)
 var shirtValue = testObj.shirt;
 console.log(shirtValue);
+
 
 
 
