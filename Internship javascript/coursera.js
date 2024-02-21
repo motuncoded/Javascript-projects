@@ -244,6 +244,8 @@ class HighSpeedTrain extends train {
 
 
 
+
+
 var train5 = new train('blue', false);
 var highSpeed1 = new HighSpeedTrain(200, false, 'green', false);
 console.log(train5);
@@ -562,6 +564,7 @@ class Treadmill {
     }
 }
 
+
 class Gym {
     constructor(openHrs, stationaryBikePos, treadmillPos) {
         this.openHrs = openHrs
@@ -569,6 +572,145 @@ class Gym {
         this.treadmill = new Treadmill(treadmillPos, 5)
     }
 }
+
+
+var train5 = new train('blue', false);
+var highSpeed1 = new HighSpeedTrain(200, false, 'green', false);
+console.log(train5);
+console.log(highSpeed1); //HighSpeedTrain {color: 'green',lightOn: false,passengers: 200,highSpeedOn: false}
+console.log(train5.toggleLights())
+console.log(train5.lightsStatus())
+console.log(train5.getPrototype());
+class StationaryBike {
+    constructor(position, gears) {
+        this.position = position
+        this.gears = gears
+    }
+}
+
+class Treadmill {
+    constructor(position, modes) {
+        this.position = position
+        this.modes = modes
+    }
+}
+
+class Gym {
+    constructor(openHrs, stationaryBikePos, treadmillPos) {
+        this.openHrs = openHrs
+        this.stationaryBike = new StationaryBike(stationaryBikePos, 8)
+        this.treadmill = new Treadmill(treadmillPos, 5)
+    }
+}
+
+var boxingGym = new Gym("7-22", "right corner", "left corner")
+
+console.log(boxingGym.openHrs) //
+console.log(boxingGym.stationaryBike) //
+console.log(boxingGym.treadmill) //
+//default parameter
+function noDefaultParams(number) {
+    console.log('Result:', number * number)
+}
+noDefaultParams();//NaN
+function withDefaultParams(number = 10) {
+    console.log('Result:', number * number)
+}
+withDefaultParams()//100
+class NoDefaultParams1 {
+    constructor(num1, num2, num3, string1, bool1) {
+        this.num1 = num1;
+        this.num2 = num2;
+        this.num3 = num3;
+        this.string1 = string1;
+        this.bool1 = bool1;
+    }
+    calculate() {
+        if(this.bool1) {
+            console.log(this.string1, this.num1 + this.num2 + this.num3);
+            return;
+        }
+        return "The value of bool1 is incorrect"
+    }
+    
+}
+var fail = new NoDefaultParams1(1, 2, 3, false);
+var pass = new NoDefaultParams1(1, 0,0, true)
+console.log(fail.calculate()); 
+console.log(pass.calculate()); 
+class WithDefaultParams {
+    constructor(num1 = 1, num2 = 2, num3 = 3, string1 = "Result:", bool1 = true) {
+        this.num1 = num1;
+        this.num2 = num2;
+        this.num3 = num3;
+        this.string1 = string1;
+        this.bool1 = bool1;
+    }
+    calculate() {
+        if(this.bool1) {
+            console.log(this.string1, this.num1 + this.num2 + this.num3);
+            return;
+        }
+        return "The value of bool1 is incorrect"
+    }
+}
+var better = new WithDefaultParams();
+better.calculate(); // Result: 6
+class Animal {
+    constructor(color = 'yellow', energy = 100) {
+        this.color = color;
+        this.energy = energy;
+    }
+    isActive() {
+        if(this.energy > 0) {
+            this.energy -= 20;
+            console.log('Energy is decreasing, currently at:', this.energy)
+        } else if(this.energy == 0){
+            this.sleep();
+        }
+    }
+    sleep() {
+        this.energy += 20;
+        console.log('Energy is increasing, currently at:', this.energy)
+    }
+    getColor() {
+        console.log(this.color)
+    }
+}class Cat extends Animal {
+    constructor(sound = 'purr', canJumpHigh = true, canClimbTrees = true, color, energy) {
+        super(color, energy);
+        this.sound = sound;
+        this.canClimbTrees = canClimbTrees;
+        this.canJumpHigh = canJumpHigh;
+    }
+    makeSound() {
+        console.log(this.sound);
+    }
+}
+
+class Bird extends Animal {
+    constructor(sound = 'chirp', canFly = true, color, energy) {
+        super(color, energy);
+        this.sound = sound;
+        this.canFly = canFly;
+    }
+    makeSound() {
+        console.log(this.sound);
+    }
+}
+class HouseCat extends Cat {
+    constructor(houseCatSound = "meow", sound,canJumpHigh,canClimbTrees, color,energy) {
+        super(sound,canJumpHigh,canClimbTrees, color,energy);
+        this.houseCatSound = houseCatSound;
+    }
+    makeSound(option) {
+        if (option) {
+            super.makeSound();
+        }
+        console.log(this.houseCatSound);
+    }
+}
+
 
 var boxingGym = new Gym("7-22", "right corner", "left corner")
 
@@ -702,6 +844,7 @@ class HouseCat extends Cat {
     }
 }
 
+
 class Tiger extends Cat {
     constructor(tigerSound = "Roar!", sound,canJumpHigh,canClimbTrees, color,energy) {
         super(sound,canJumpHigh,canClimbTrees, color,energy);
@@ -760,6 +903,8 @@ function manager() {
     doSomethingFun() {
                 this.energy -= 10;
 
+
+
     }
 }
 // Task 2: Code a Worker class
@@ -770,7 +915,7 @@ class Worker extends Person {
         this.hourlyWage = hourlyWage;
     }
 goToWork(){
-    this.xp += 10;
+    this.xp += 10
     }
 }
 
@@ -812,6 +957,7 @@ polly.energy; // 100
 
 polly.isActive(); // Energy is decreasing, currently at: 80
 
+>
 class Parrot extends Bird {
     constructor(canTalk = false, sound,canFly, color,energy) {
         super(sound,canFly, color,energy);
@@ -827,6 +973,13 @@ class Parrot extends Bird {
     }
 }var polly = new Parrot(true); // we're passing `true` to the constructor so that polly can talk
 var fiji = new Parrot(false); // we're passing `false` to the constructor so that fiji can't talk
+
+polly.makeSound(); // 'chirp', 'I'm a talking parrot!'
+fiji.makeSound(); // 'chirp'
+polly.color; // yellow
+polly.energy; // 100
+polly.isActive(); // Energy is decreasing, currently at: 80
+
 
 polly.makeSound(); // 'chirp', 'I'm a talking parrot!'
 fiji.makeSound(); // 'chirp'
@@ -872,6 +1025,7 @@ var cuddles = new Tiger();
 cuddles.makeSound(false); // Roar!
 cuddels.makeSound(true); // purr, Roar!
 
+
 var penguin = new Bird("shriek", false, "black and white", 200); // setting all the custom properties
 penguin; // Bird {color: 'black and white', energy: 200, sound: 'shriek', canFly: false }
 
@@ -885,10 +1039,13 @@ penguin.energy; // 200
 // leo, both purr and meow now:
 //leo.makeSound(true); // purr, meow
 
+
+
 leo.makeSound(false); // meow
 
 // leo, both purr and meow now:
 leo.makeSound(true); // purr, meow
+
 var cuddles = new Tiger();
 cuddles.makeSound(false); // Roar!
 cuddles.makeSound(true); // purr, Roar!
@@ -985,7 +1142,11 @@ console.log(uniqueFruits);// { 'apple', 'pear', 'plum' }
 //catenation of 
 const ffruits = ['apple', 'pear', 'plum']
 const berries = ['blueberry', 'strawberry']
+
+const fruitsAndBerries = [...ffruits, ...berries] // concatenation
+
 const fruitsAndBerries = [...ffruits, ...berries] // concatenate
+
 console.log(fruitsAndBerries);
 const flying = { wings: 2 }
 const car = { wheels: 4 }
@@ -1009,5 +1170,9 @@ console.log(car6.speed, car7.speed)
 const fruits1 = ['apples', 'pears']
 const fruits2 = [...fruits1]
 fruits1.pop()
+
+console.log(fruits1, "not", fruits2)
+
 console.log(fruits1, "not", fruits2)
 console.log(Object.entries(car4));
+

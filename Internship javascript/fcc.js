@@ -510,8 +510,28 @@ function cc(card) {
     return count + " "+ holdBet;
 }
 cc("K")
-
-
+//objects
+var ourDog = {
+    "name": "Camper",
+    "legs": 4,
+    "tails": 1,
+    "friends":["everything!"]
+}
+var myDog = {
+      "name": "Camper",
+    "legs": 4,
+    "tails": 1,
+    "friends":["everything!"]
+}
+var testObj = {
+    "hat": "ballcap",
+    "shirt": "jersery",
+    "shoes": "cleats"
+}
+var hatValue = testObj.hat;
+console.log(hatValue)
+var shirtValue = testObj.shirt;
+console.log(shirtValue);
 
 
 
