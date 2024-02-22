@@ -627,7 +627,47 @@ var myPlants = [{
 var secondTree = myPlants[1].list[2];
 console.log(secondTree)
 //record collection
-
+var collection = [{
+    "2048": {
+        "album": "Slippery When Wet",
+        "artist": "Bon Jovi",
+        "tracks": [
+            "Let it Rock",
+            "You Give Love a Bad Name"
+        ]
+    },
+    
+        "2468": {
+        "album": "1999",
+        "artist": "Prince",
+        "tracks": [
+            "1999",
+            "Little Red Corvette"
+        ]
+    },
+        "1245": {
+        "artist": "Robert Palmer",
+        "tracks": [
+            
+        ]
+    },
+    "1245": {
+        "artist": "Robert  Palmer",
+        "tracts": [
+            
+        ]
+    },
+    "5439": {
+        "album": "ABBA Gold"
+    }
+    
+}]
+var collectionCopy = JSON.parse(Json.stringify(collection))
+function updateCollection(id, prop, value) {
+    
+    
+    return collection;
+}
 
 
 
