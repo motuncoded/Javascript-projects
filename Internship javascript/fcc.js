@@ -523,15 +523,174 @@ var myDog = {
     "tails": 1,
     "friends":["everything!"]
 }
+
+ourDog.name = "Happy Campers"
+ourDog.bark ="bow-wow"
+
 var testObj = {
     "hat": "ballcap",
     "shirt": "jersery",
     "shoes": "cleats"
 }
+
+//dot notataion
+
 var hatValue = testObj.hat;
 console.log(hatValue)
 var shirtValue = testObj.shirt;
 console.log(shirtValue);
+
+//bracket notataion
+var testingObj = {
+    "an entree": "hamburger",
+    "my side": "veggies",
+    "the drink":"water"
+}
+
+var entreeValue = testingObj["an entree"]
+console.log(entreeValue);
+//accessing objects properties with variables
+var playerObj1 = {
+    12: "Namath",
+    16: "Montana",
+    19:"Unitas"
+ }
+var playerNumber = 16;
+var player = playerObj1[playerNumber];
+//updating object properties
+
+//to use objects in switch statement
+function phoneticLookup(val) {
+    var result = "";
+    var lookup = {
+        "alpha":"Adams",
+        "bravo": "Boston",
+        "charlie":"Chicago",
+        "delta":"Denver",
+        "echo": "Easy",
+        "foxtrot": "frank"
+         
+    }
+    result = lookup[val]
+    return result;
+}
+console.log(phoneticLookup("charlie"))
+//testing object properties
+var myObj = {
+    gift: "pony",
+    pet: "kitten",
+    bed:"sleigh"
+}
+function checkObj(checkProp) {
+    if (myObj.hasOwnProperty(checkProp)) {
+        return myObj[checkProp]
+    }
+    else {
+        return 'not found'
+    }
+     
+}
+console.log(checkObj("gift"))
+console.log(checkObj("Hi"))
+var myMusic = [{
+    "artist": "Billy Joel",
+    "title": "Piano Man",
+    "release_year": 1973,
+    "formats": [
+        "CD",
+        "8T",
+        "LP"
+    ],
+"gold": true
+},
+//adding another objects
+{
+    "artist": "Billy Joel",
+    "title": "Piano Man",
+    "release_year": 1973,
+    "formats": [
+        "CD",
+        "8T",
+        "LP"
+    ],
+"gold": true
+    }]
+// accessing nested objects
+var myStorage = {
+    "car": {
+        "inside": {
+            "glove-box": "maps",
+            "passenger seat": "crumbs"
+        },
+        "outside": {
+            "trunk":"jack"
+        }
+    }
+}
+var gloveVal = myStorage.car.inside["glove-box"]
+console.log(gloveVal)
+var myPlants = [{
+    type: "flowers",
+    list: [
+        "rose",
+        "tulip",
+        "dandelion"
+    ]
+    
+}, {
+   type: "flowers",
+    list: [
+        "rose",
+        "tulip",
+        "dandelion"
+    ] 
+}]
+    
+var secondTree = myPlants[1].list[2];
+console.log(secondTree)
+//record collection
+var collection = [{
+    "2048": {
+        "album": "Slippery When Wet",
+        "artist": "Bon Jovi",
+        "tracks": [
+            "Let it Rock",
+            "You Give Love a Bad Name"
+        ]
+    },
+    
+        "2468": {
+        "album": "1999",
+        "artist": "Prince",
+        "tracks": [
+            "1999",
+            "Little Red Corvette"
+        ]
+    },
+        "1245": {
+        "artist": "Robert Palmer",
+        "tracks": [
+            
+        ]
+    },
+    "1245": {
+        "artist": "Robert  Palmer",
+        "tracts": [
+            
+        ]
+    },
+    "5439": {
+        "album": "ABBA Gold"
+    }
+    
+}]
+var collectionCopy = JSON.parse(Json.stringify(collection))
+function updateCollection(id, prop, value) {
+    
+    
+    return collection;
+}
+
 
 
 
