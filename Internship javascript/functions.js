@@ -27,6 +27,10 @@ function sum(a, b) {
 
 }
 sum(2, 3)
+
+
+
+
 function mult(a, b) {
     let val = a * b;
     return val;
@@ -46,6 +50,9 @@ return 2 * (c + d);
 
 }
 cccalc(7);
+
+
+
 //rest parameter
 function collect(x, ...y) {
     console.log(x);
@@ -86,6 +93,7 @@ function outer(x){
 }
 const outerReturn = outer(10);
 outerReturn(2);
+
 //callback function
 function foo(bar) {
     bar()
@@ -168,3 +176,8 @@ function recurse(count) {
     recurse(count -1)
 }
 fetchWater(5);
+outerReturn(2);
+    console.log("outer")
+}
+
+
