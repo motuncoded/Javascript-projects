@@ -523,18 +523,23 @@ var myDog = {
     "tails": 1,
     "friends":["everything!"]
 }
+
 ourDog.name = "Happy Campers"
 ourDog.bark ="bow-wow"
+
 var testObj = {
     "hat": "ballcap",
     "shirt": "jersery",
     "shoes": "cleats"
 }
+
 //dot notataion
+
 var hatValue = testObj.hat;
 console.log(hatValue)
 var shirtValue = testObj.shirt;
 console.log(shirtValue);
+
 //bracket notataion
 var testingObj = {
     "an entree": "hamburger",
@@ -685,6 +690,23 @@ function updateCollection(id, prop, value) {
     
     return collection;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
