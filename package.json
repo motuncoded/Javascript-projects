@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "vite": "^5.0.10"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
   }
 }
