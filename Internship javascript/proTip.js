@@ -10,4 +10,7 @@ function multiply(a,b, callback){
   callback(result);
 }
 function newFunction(){
+  return multiply(5,5, printToConsole)
 }
+  setTimeOut(newFunction, 2000)
+
